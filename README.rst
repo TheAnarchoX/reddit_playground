@@ -28,6 +28,12 @@ Features
 
 * TODO
 
+- Write Models:
+    - Submission
+    - Comment
+    - Redditor
+    - Subreddit
+
 Credits
 -------
 

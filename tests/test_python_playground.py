@@ -7,7 +7,7 @@
 import unittest
 from click.testing import CliRunner
 
-from python_playground import python_playground
+from python_playground import playground
 from python_playground import cli
 
 
@@ -19,9 +19,6 @@ class TestPython_playground(unittest.TestCase):
 
     def tearDown(self):
         """Tear down test fixtures, if any."""
-
-    def test_000_something(self):
-        """Test something."""
 
     def test_command_line_interface(self):
         """Test the CLI."""

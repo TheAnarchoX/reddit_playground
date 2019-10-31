@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for Python Playground."""
+"""Top-level package for Reddit Playground."""
 
 __author__ = """Jim de Vries"""
 __email__ = 'jimdvries@gmail.com'

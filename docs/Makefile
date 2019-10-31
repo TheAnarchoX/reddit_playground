@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = python_playground
+SPHINXPROJ    = reddit_playground
 SOURCEDIR     = .
 BUILDDIR      = _build
 

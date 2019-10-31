@@ -1,4 +1,4 @@
-* Python Playground version:
+* Reddit Playground version:
 * Python version:
 * Operating System:
 

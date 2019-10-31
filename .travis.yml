@@ -23,5 +23,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: TheAnarchoX/python_playground
+    repo: TheAnarchoX/reddit_playground
     python: 3.8

@@ -1,13 +1,13 @@
 =================
-Python Playground
+Reddit Playground
 =================
 
 
-.. image:: https://img.shields.io/pypi/v/python_playground.svg
-        :target: https://pypi.python.org/pypi/python_playground
+.. image:: https://img.shields.io/pypi/v/reddit_playground.svg
+        :target: https://pypi.python.org/pypi/reddit_playground
 
-.. image:: https://img.shields.io/travis/TheAnarchoX/python_playground.svg
-        :target: https://travis-ci.org/TheAnarchoX/python_playground
+.. image:: https://img.shields.io/travis/TheAnarchoX/reddit_playground.svg
+        :target: https://travis-ci.org/TheAnarchoX/reddit_playground
 
 .. image:: https://readthedocs.org/projects/python-playground/badge/?version=latest
         :target: https://python-playground.readthedocs.io/en/latest/?badge=latest
@@ -16,7 +16,7 @@ Python Playground
 
 
 
-Personal Python Playground
+Personal Reddit Playground
 
 
 * Free software: MIT license

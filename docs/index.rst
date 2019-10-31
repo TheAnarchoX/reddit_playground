@@ -1,4 +1,4 @@
-Welcome to Python Playground's documentation!
+Welcome to Reddit Playground's documentation!
 ======================================
 
 .. toctree::

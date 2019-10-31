@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for python_playground."""
+"""Console script for reddit_playground."""
 import sys
 import click
 import configparser
 import os
-from python_playground.lib.GlobalContext import GlobalContext
+from reddit_playground.lib.GlobalContext import GlobalContext
 @click.command()
-@click.option("-v", "--verbose", is_flag=True, help='run Python Playground in verbose mode')
+@click.option("-v", "--verbose", is_flag=True, help='run Reddit Playground in verbose mode')
 def main(verbose):
 
     os.environ["PLAYGROUND_VERBOSE"] = str(verbose).upper()
@@ -16,7 +16,7 @@ def main(verbose):
     config = configparser.ConfigParser()
     config.read('./config/config.ini')
     if os.getenv("PLAYGROUND_VERBOSE") == "TRUE":
-        print(f"Starting Python Playground (v{config.get('PLAYGROUND', 'VERSION')})")
+        print(f"Starting Reddit Playground (v{config.get('PLAYGROUND', 'VERSION')})")
 
     # Initialize the GlobalContext
     context = GlobalContext()

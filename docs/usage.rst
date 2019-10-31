@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use Python Playground in a project::
+To use Reddit Playground in a project::
 
-    import python_playground
+    import reddit_playground

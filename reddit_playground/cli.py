@@ -5,7 +5,10 @@ import sys
 import click
 import configparser
 import os
+
 from reddit_playground.lib.GlobalContext import GlobalContext
+
+
 @click.command()
 @click.option("-v", "--verbose", is_flag=True, help='run Reddit Playground in verbose mode')
 def main(verbose):

@@ -2,15 +2,9 @@ version: '3.4'
 
 volumes:
   redis-data: null
-networks:
-  playground-net:
-    driver: bridge
-
 services:
   neo4j:
     image: 'bitnami/neo4j:latest'
-    networks:
-        - playground-net
     ports:
         - '7474:7474'
         - '7473:7473'
@@ -20,13 +14,12 @@ services:
 
   redis:
     image: 'redis:alpine'
+    ports:
+        - '6379:6379'
     command:
       - redis-server
       - '--appendonly'
       - 'yes'
-    hostname: redis
-    networks:
-      - playground-net
     volumes:
       - 'redis-data:/data'
 
@@ -36,39 +29,11 @@ services:
       restart: always
       environment:
           - 'REDIS_HOSTS=local:redis:6379'
-      networks:
-          - playground-net
       ports:
           - '6380:8081'
 
   rq-dashboard:
       image: jaredv/rq-docker:0.0.2
       command: rq-dashboard -H redis
-      networks:
-          - playground-net
       ports:
           - 9181:9181
-
-  rq-worker-1:
-      image: jaredv/rq-docker:0.0.2
-      command: rq worker -u redis://redis:6379 redditors
-      networks:
-          - playground-net
-
-  rq-worker-2:
-      image: jaredv/rq-docker:0.0.2
-      command: rq worker -u redis://redis:6379 subreddits
-      networks:
-          - playground-net
-
-  rq-worker-3:
-      image: jaredv/rq-docker:0.0.2
-      command: rq worker -u redis://redis:6379 submissions
-      networks:
-          - playground-net
-
-  rq-worker-4:
-      image: jaredv/rq-docker:0.0.2
-      command: rq worker -u redis://redis:6379 comments
-      networks:
-          - playground-net

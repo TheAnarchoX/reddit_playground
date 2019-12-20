@@ -1,10 +1,15 @@
 import configparser
 import os
+import time
 
 from neomodel import config as neomodel_conf
 from praw import Reddit
 from redis import Redis
 from rq import Queue
+
+
+def test():
+    return None
 
 class Singleton:
 
@@ -45,7 +50,7 @@ class GlobalContext(Singleton):
             print(f"Connected as: {self.Reddit.user.me()}")
 
         #Create database engine
-        neomodel_conf.DATABASE_URL = os.getenv('NEO4J_CS')  #this connection method is a shame and i know it
+        neomodel_conf.DATABASE_URL = 'bolt://neo4j:password@localhost:7687'  #this connection method is a shame and i know it
         if self.verbose:
             print(f"Connected to Neo4j DB")
 
